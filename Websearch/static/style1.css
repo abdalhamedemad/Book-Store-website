@@ -1,0 +1,37 @@
+html{
+    height: 100%;
+  }
+  body {
+     /* height: 100%;*/
+      box-sizing:border-box;
+     
+  }
+  main {
+    /*height: 100% -50px;*/
+    display: flex;
+    padding: 50px 50px;
+   /* align-items: center;*/
+   /* align-content: center;*/
+  
+  }
+  .urls {
+   
+    width: 350px;
+   /* margin-left: auto;
+    margin-right: auto;*/
+   
+    display: flex;
+    /*align-items: center;*/
+   /* align-content: center;*/
+    flex-direction: column;
+    margin-bottom: 120px;
+   
+}
+.urls span {
+  margin-bottom: 20px;
+}
+.urls span a {
+  padding-bottom: 5px;
+  display: block;
+}
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for ( 'static' , filename='font-awesome/css/all.min.css')}}" />
+    <title>{% block title %}{% endblock %}</title>
+    {% if custom_css == "main" %}
+    <link rel="stylesheet" href="{{ url_for ( 'static' , filename='style.css')}}" />
+    {% endif %}
+
+    {% if custom_css == "admin" %}
+    <link rel="stylesheet" href="{{ url_for ( 'static' , filename='admin.css')}}" />
+    {% endif %}
+
+    {% if custom_css == "purchase" %}
+    <link rel="stylesheet" href="{{ url_for ( 'static' , filename='purchase.css')}}" />
+    {% endif %}
+
+    
+</head>
+<body>
+   
+    <nav>
+        <span id="navig"><i class="fa-solid fa-book"></i> Book Store</span>
+        <span class="icons"><i class="fa-solid fa-magnifying-glass"></i><i class="fas fa-user"></i><i id="mmk" class="fa-solid fa-bars"></i></span>
+        <ul class="mmk1" id="mmk12">
+            <li><a href="/admin">Admin</a></li>
+            <li><a href="/purchase_c">purchase</a></li>
+            <li><a href="#hn">sign in</a></li>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav> 
+
+    
+    <main>
+      {% block main %}{% endblock %}
+   </main>   
+   <div class="contents">
+    <section>
+    </section>
+   </div>
+    <footer>
+      <h3>Thank you</h3>
+      <p><i class="fa-solid fa-copyright"></i>opy right by abdelhameed emad 2021 </p>  
+    </footer>
+    <script src="{{ url_for ( 'static' , filename='script.js')}}">
+        document.getElementById("navig").innerHTML="mmfj"
+    </script>
+</body>
+</html>

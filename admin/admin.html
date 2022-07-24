@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css" >
+</head>
+<body>
+    <nav>
+        <span><i class="fa-solid fa-book"></i> Book Store</span>
+        <span class="icons"><i class="fa-solid fa-magnifying-glass"></i><i class="fas fa-user"></i><i class="fa-solid fa-bars"></i></span>
+        <ul>
+            <li><a href="#serhn"></a>sign out</li>
+            <li><a href="#porthn">purchase</a></li>
+            <li><a href="#hn">sign in</a></li>
+            <li><a href="#cohn">register</a></li>
+        </ul>
+    </nav> 
+
+    <main>
+    <!-- form   ex action="conatct.php  , post or get -->
+    <form action="" method="post"> 
+        <header> Add new book </header>
+        <label for="BookName">Book Name</label>
+        <input type="text" name="BookName">
+
+        <label for="AuthorName">Author Name</label>
+        <input type="text" name="AuthorName">
+
+        <label for="BookPrice">Book Price</label>
+        <input type="text"  name="BookPrice">
+
+        <label for="Section">Section</label>
+        <select type="text" name="Section">
+            <option>
+                please check a type
+            </option>
+            <option value="fiction">fiction</option>
+            <option value="Drama">Drama</option>
+            <option value="Science">Science</option>
+            <option value="Support4">Suport4</option>
+            </select>
+        <label for="Description">Description</label>    
+        <textarea></textarea>
+        <button>Add</button>      
+    </form>
+    
+</main>
+<div class="contents">
+    <section>
+    </section>
+   </div>
+    <footer>
+      <h3>Thank you</h3>
+      <p><i class="fa-solid fa-copyright"></i>opy right by abdelhameed emad 2021 </p>  
+    </footer>
+
+</body>
+</html>

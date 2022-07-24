@@ -1,0 +1,51 @@
+{% extends 'basetemp.html' %}
+{% block title %} {{ title }} {% endblock %}
+{% block main %}
+
+<form action="addsec" method="Post"> 
+    <header> Add new Section </header>
+    <label for="SectionName">Section Name</label>
+    <input type="text" name="SectionName">
+
+    
+    <button>Add</button>      
+</form>     
+
+ <form action="add" method="Post"> 
+    <header> Add new book </header>
+    <label for="BookName">Book Name</label>
+    <input type="text" name="BookName">
+
+    <label for="AuthorName">Picture Name</label>
+    <input type="text"  name="AuthorName">
+
+    <label for="BookPrice">Book Price</label>
+    <input type="text"   name="BookPrice">
+
+    <label for="Section">Section</label>
+    <select type="text" name="Section">
+        <option>
+            please check a type
+        </option>
+        <option value="fiction">fiction</option>
+        <option value="Drama">Drama</option>
+        <option value="Science">Science</option>
+        <option value="Support4">Suport4</option>
+        {% for sec in sectionsname %}
+        <option value={{sec}}>{{sec}}</option>
+        {% endfor %}
+
+        </select>
+    <label for="Description">Description</label>    
+    <textarea></textarea>
+    <button>Add</button>
+    
+    
+
+    
+</form>
+
+
+
+
+{% endblock %} 

@@ -1,0 +1,46 @@
+{% extends 'basetemp.html' %}
+{% block title %} {{ title }} {% endblock %}
+{% block main %}
+
+<section class="section1">
+    <article><i class="fa-solid fa-book-open-reader"></i>
+     
+ <h1>Welcome To Our Store</h1>
+ </article>
+ </section>
+  <section class="section2"> 
+  <div class="container">
+     
+     <aside class="sidebar1">
+         {% for book in books %}
+         <span><img src="{{ url_for( 'static' , filename='images/' + book.source + '.jpg')}}" alt=book.name><form action="purchase"  method="Post"><input type="hidden" name="bookname"  value={{book.name}} /> <button class="ff">Buy</button>
+            </form> {{book.price}}
+               </span>
+         {% endfor %}
+         
+        </aside>
+    <aside class="sidebar2">
+     <form  action="" method="post"> 
+ 
+         <button>Fiction</button>   
+         <button>Non fiction</button>   
+         <button>Drama</button>   
+         <button>Classic</button>   
+         <button>Crime</button>   
+         <button>Math</button>   
+         <button>Philosophy</button>   
+         <button>Science</button>
+         <button>Fiction</button>   
+         <button>Non fiction</button>   
+         <button>Drama</button>   
+         <button>Classic</button>   
+         <button>Crime</button>   
+         <button>Math</button>   
+         <button>Philosophy</button>   
+         <button>Science</button>
+     </form>   
+    </aside>
+ </div>
+</section>
+
+{% endblock %} 

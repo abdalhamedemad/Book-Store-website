@@ -1,0 +1,26 @@
+{% extends 'basetemp.html' %}
+{% block title %} {{ title }} {% endblock %}
+{% block main %}
+
+<aside class="sidebar1">
+    {% for book in books %}
+    <span><img src="{{ url_for( 'static' , filename='images/' + book.source + '.jpg')}}" alt=book.name><form action="del"  method="Post"><input type="hidden" name="bookname"  value={{book.name}} /> <button class="ff">Delete</button>
+       </form> {{book.price}}
+          </span>
+    {% endfor %}
+
+   </aside>
+   <section>
+    {% if cost!="0" %}
+    <h2> The Total Cost Of Purchase Is = {{cost}} L.E </h2>
+    <form action="confirm" method="post"><button> Confirm </button> </form>
+    {% endif %}
+
+    {% if cost=="0" %}
+    <h2> The  Purchase Is empty  :)  Thank you  :D  </h2>
+    {% endif %}
+
+
+   </section>
+
+{% endblock %} 
